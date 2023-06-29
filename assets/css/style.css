@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #272829;
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -41,7 +41,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 5rem;
-  z-index: 996;
+  z-index: 400;
   background: #0563bb;
   width: 40px;
   height: 40px;
@@ -65,6 +65,105 @@ h6 {
   opacity: 1;
 }
 
+/* Whatsapp Chat Button */
+.whatsapp-click {
+  background-color: rgb(79, 198, 90);
+  color: white;
+  position: fixed;
+  z-index: 500;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  margin: 0px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px;
+  cursor: pointer;
+  transition: filter 0.2s ease 0s;
+}
+.whatsapp-click:hover {
+  background-color: rgb(100, 241, 115);
+}
+
+.whatsapp-modal {
+  margin-left: 8rem;
+  position: fixed;
+  opacity: 0;
+  bottom: 6rem;
+  right: 1rem;
+  width: 22rem;
+  height: 19rem;
+  border-radius: 8px;
+  background-color: #067ded;
+  box-shadow: rgba(0, 0, 0, 0.25) -1px 4px 11px;
+  font-size: 0.9rem;
+  z-index: 600;
+}
+.wm-head {
+  background-color: rgb(9, 94, 84);
+  height: 5rem;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 1.5rem 0 0 2rem;
+}
+#closeModal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.bi.bi-x {
+  font-size: 1.5rem;
+}
+.wm-body {
+  background-image: url('../../assets/img/whatsapp_background.png');
+  height: 10rem;
+  color: rgb(121, 121, 121);
+  padding: 1.5rem 0 0 1.5rem;
+}
+#curTime {
+  float: right;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+.wm-footer {
+  background-color: rgb(255, 255, 255);
+  height: 4rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wm-innerchat {
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 250px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.wm-chat-block {
+  background-color: rgb(46, 204, 113);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 80%;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 0px solid;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -80,7 +179,7 @@ h6 {
 }
 
 #preloader:before {
-  content: "";
+  content: '';
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
@@ -169,7 +268,7 @@ h6 {
   list-style: none;
 }
 
-.nav-menu>ul>li {
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
@@ -203,7 +302,6 @@ h6 {
 }
 
 @media (min-width: 992px) {
-
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -219,7 +317,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   color: #fff;
   background: #0563bb;
 }
@@ -227,18 +325,18 @@ h6 {
 .nav-menu a:hover span,
 .nav-menu .active span,
 .nav-menu .active:focus span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover > a span {
   color: #fff;
 }
 
 .nav-menu a:hover,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   width: 100%;
   color: #fff;
 }
 
 .nav-menu a:hover span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover > a span {
   display: block;
 }
 
@@ -284,7 +382,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
+  background: url('../img/hero-bg.jpg') top right no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -297,14 +395,13 @@ h6 {
 @media (max-width: 768px) {
   #hero {
     width: 100%;
-    background: url("../img/hero-mobile.jpg") no-repeat;
+    background: url('../img/hero-mobile.jpg') no-repeat;
     background-size: cover;
   }
-  
 }
 
 #hero:before {
-  content: "";
+  content: '';
   background: rgba(255, 255, 255, 0.8);
   position: absolute;
   bottom: 0;
@@ -325,7 +422,7 @@ h6 {
   color: #45505b;
   margin: 15px 0 0 0;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 #hero p span {
@@ -391,7 +488,7 @@ section {
 }
 
 .section-title h2::before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 120px;
@@ -402,7 +499,7 @@ section {
 }
 
 .section-title h2::after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 40px;
@@ -489,7 +586,7 @@ section {
 .facts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
 }
 
@@ -509,7 +606,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #45505b;
 }
 
@@ -552,7 +649,7 @@ section {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #0563bb;
   margin-bottom: 10px;
 }
@@ -579,7 +676,7 @@ section {
 }
 
 .resume .resume-item::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
@@ -638,7 +735,7 @@ section {
 }
 
 .portfolio .portfolio-wrap::before {
-  content: "";
+  content: '';
   background: rgba(255, 255, 255, 0.7);
   position: absolute;
   left: 30px;
@@ -668,7 +765,7 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-info::before {
   display: block;
-  content: "";
+  content: '';
   width: 48px;
   height: 48px;
   position: absolute;
@@ -682,7 +779,7 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-info::after {
   display: block;
-  content: "";
+  content: '';
   width: 48px;
   height: 48px;
   position: absolute;
@@ -763,7 +860,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -771,7 +871,10 @@ section {
   border: 1px solid #0563bb;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #0563bb;
 }
 
@@ -794,7 +897,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1095,7 +1198,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1116,7 +1219,7 @@ section {
 }
 
 .contact .php-email-form .loading:before {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 50%;
   width: 24px;
@@ -1143,7 +1246,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type='submit'] {
   background: #0563bb;
   border: 0;
   padding: 10px 35px;
@@ -1152,7 +1255,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type='submit']:hover {
   background: #0678e3;
 }
 
@@ -1191,7 +1294,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
