@@ -8,6 +8,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+:root {
+  --green200: rgb(48, 194, 63);
+  --green500: rgb(10, 128, 22);
+}
 body {
   font-family: 'Open Sans', sans-serif;
   color: #272829;
@@ -67,7 +72,7 @@ h6 {
 
 /* Whatsapp Chat Button */
 .whatsapp-click {
-  background-color: rgb(79, 198, 90);
+  background-color: var(--green200);
   color: white;
   position: fixed;
   z-index: 500;
@@ -85,7 +90,7 @@ h6 {
   transition: filter 0.2s ease 0s;
 }
 .whatsapp-click:hover {
-  background-color: rgb(100, 241, 115);
+  background-color: var(--green500);
 }
 
 .whatsapp-modal {
@@ -150,7 +155,7 @@ h6 {
   overflow: hidden;
 }
 .wm-chat-block {
-  background-color: rgb(46, 204, 113);
+  background-color: var(--green200);
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -159,9 +164,12 @@ h6 {
   border-radius: 20px;
   border: 0px solid;
   padding: 10px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
+}
+.wm-chat-block:hover {
+  background-color: var(--green500);
 }
 
 /*--------------------------------------------------------------

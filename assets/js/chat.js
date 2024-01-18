@@ -8,19 +8,27 @@ const sendTo = '+2347011655197';
 const initText = 'Hello, I would like to employ your service';
 const url = `https://api.whatsapp.com/send?phone=${sendTo}&text=${initText}`;
 
-const openWAModal = () => {
-    const d = new Date(); // for now
-    const h = d.getHours(); // => 9
-    const m = String(d.getMinutes()).padStart(2, '0'); // =>  30
-    timeElement.innerHTML = h + ':' + m;
-    
-    if(WaModal.style.opacity > 0) {
-        WaModal.style.opacity = 0;
-        return;      
-    }
-    WaModal.style.opacity = 1;
-}
+closeElement.style.display = 'none';
 
-chatElement.addEventListener('click', openWAModal);
-closeElement.addEventListener('click', openWAModal);
-clickChat.addEventListener('click', ()=>{window.open(url, '_blank')})
+const toggleWAModal = () => {
+  const d = new Date(); // for now
+  const h = d.getHours(); // => 9
+  const m = String(d.getMinutes()).padStart(2, '0'); // =>  30
+  timeElement.innerHTML = h + ':' + m;
+
+  if (WaModal.style.opacity > 0) {
+    clickChat.style.display = 'none';
+    closeElement.style.display = 'none';
+    WaModal.style.opacity = 0;
+    return;
+  }
+  clickChat.style.display = 'flex';
+  closeElement.style.display = 'block';
+  WaModal.style.opacity = 1;
+};
+
+chatElement.addEventListener('click', toggleWAModal);
+closeElement.addEventListener('click', toggleWAModal);
+clickChat.addEventListener('click', () => {
+  window.open(url, '_blank');
+});
